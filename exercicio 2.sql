@@ -7,3 +7,8 @@ JOIN clientes c ON p.cliente_id = c.id
 GROUP BY c.nome
 ORDER BY total DESC
 LIMIT 1;
+
+-- mostre cliente_id, total gasto
+SELECT cliente_id, sum(valor)
+FROM pedidos
+GROUP BY cliente_id;
